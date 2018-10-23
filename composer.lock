@@ -4,8 +4,38 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "66ca7343889332c2b8ecca11c251430c",
+    "content-hash": "385eb02b2031e60fe55789eb519cd720",
     "packages": [
+        {
+            "name": "alquran/tools",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/islamic-apps/alquran-tools.git",
+                "reference": "cccbe0e52b56d302c3c2363a727b2c61ac825c68"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/islamic-apps/alquran-tools/zipball/cccbe0e52b56d302c3c2363a727b2c61ac825c68",
+                "reference": "cccbe0e52b56d302c3c2363a727b2c61ac825c68",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "AlQuranCloud": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Meezaan-ud-Din Abdu Dhil-Jalali Wal-Ikram",
+                    "email": "website@meezaan.net"
+                }
+            ],
+            "description": "Various tools to parse and process Quran Text",
+            "time": "2017-07-10T10:34:57+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",

@@ -14,7 +14,7 @@ class CreateSuratsTable extends Migration
     public function up()
     {
         Schema::create('surats', function (Blueprint $table) {
-            $table->increments('nomor_surat');
+            $table->integer('nomor_surat')->primary();
             $table->string('nama_surat', 50);
             $table->string('nama_surat_arab', 50);
             $table->string('arti_nama', 100);

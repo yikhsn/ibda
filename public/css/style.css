@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #73B8D3;
+}
+
+
 *,
 *::after,
 *::before {
@@ -11,8 +16,89 @@ html {
 }
 
 body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Nunito', sans-serif; 
   font-weight: 400;
   line-height: 1.8;
   box-sizing: border-box;
+}
+
+header {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(115, 184, 211, 0.8),
+    rgba(115, 184, 211, 0.8)
+  ),
+  url('../img/background.jpg');
+  height: 100vh;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+
+.header-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 8rem 10rem;
+  border-radius: 2rem;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: auto;
+  background: #ffffffb0;
+  text-align: center;
+}
+
+.header-box__logo {
+  margin-bottom: 50px;
+}
+
+.logo {
+  width: 20rem;
+  height: auto;
+  text-align: center;
+}
+
+.header-box__button {
+}
+
+.button:link,
+.button:visited {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem 3rem;
+  margin-bottom: 10px;
+  border-radius: 100px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(
+    to right,
+    #78daff,
+    #56d1ff
+    );
+}
+
+.button:last-child {
+  margin-bottom: 0;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.button-animated-left {
+  animation: moveInLeft 2s ease-out .75s;
+  animation-fill-mode: backwards;
+}
+
+.button-animated-right {
+  animation: moveInRight 2s ease-out .75s;
+  animation-fill-mode: backwards;
 }

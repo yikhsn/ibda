@@ -3,13 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\{Ayat, Surat, Juz};
+use App\Surat;
+use App\Ayat;
+use App\Juz;
 
 class MainController extends Controller
 {
     public function index() {
-        $surat = Ayat::all();
+        return view('index');
+    }
 
-        return view('index', compact('data'));
+    public function surat($id) {
+        $surat = Surat::with('ayats')->first();
+
+        return $surat;
+    }
+
+    public function ayat($id) {
+        $ayat = Ayat::with('surat')->first();
+
+        return $ayat;
+    }
+
+    public function juz($id) {
+        $juz = Juz::with('ayats')->first();
+
+        return $juz;
     }
 }

@@ -3,18 +3,16 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Juz as Juz;
-use App\Surat as Surat;
 
 class Ayat extends Model
 {
     protected $table = "ayat";
 
     public function juz() {
-        return $this->belongsTo('Juz');
+        return $this->belongsTo('App\Juz', 'nomor_juz', 'nomor_juz');
     }
 
     public function surat() {
-        return $this->belongsTo('Surat');
+        return $this->belongsTo('App\Surat', 'nomor_surat', 'nomor_surat');
     }
 }

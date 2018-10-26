@@ -12,3 +12,9 @@
 */
 
 Route::get('/', 'MainController@index');
+
+Route::get('/surat/{id}', 'MainController@surat');
+
+Route::get('/ayat/{id}', 'MainController@ayat');
+
+Route::get('/juz/{id}', 'MainController@juz');

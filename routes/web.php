@@ -11,10 +11,28 @@
 |
 */
 
+/**
+ * Controller for main page like home etc
+ */
 Route::get('/', 'MainController@index');
 
-Route::get('/surat/{id}', 'MainController@surat');
+Route::get('/read', 'MainController@read');
 
-Route::get('/ayat/{id}', 'MainController@ayat');
 
-Route::get('/juz/{id}', 'MainController@juz');
+/**
+ * Controller for Surat like single surat page and etc
+ */
+Route::get('/surat/{nomor_surat}', 'SuratController@show');
+
+
+
+/**
+ * Controller for Surat like single surat page and etc
+ */
+Route::get('/surat/{nomor_surat}/ayat/{nomor_ayat}', 'AyatController@show');
+
+
+/**
+ * Controller for Surat like single surat page and etc
+ */
+Route::get('/juz/{nomor_juz}', 'JuzController@show');

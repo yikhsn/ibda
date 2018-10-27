@@ -74,8 +74,8 @@ header {
   color: #ffffff;
   background: linear-gradient(
     to right,
-    #78daff,
-    #56d1ff
+    #73B8D3,
+    #59abcb
     );
 }
 
@@ -101,4 +101,13 @@ header {
 .button-animated-right {
   animation: moveInRight 2s ease-out .75s;
   animation-fill-mode: backwards;
+}
+
+/**
+test style
+*/
+
+li {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }

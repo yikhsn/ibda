@@ -10,24 +10,14 @@ use App\Juz;
 class MainController extends Controller
 {
     public function index() {
-        return view('index');
+        return view('home.index');
     }
 
-    public function surat($id) {
-        $surat = Surat::with('ayats')->first();
+    public function read() {
+        $surats = Surat::get();
 
-        return $surat;
-    }
+        $juzs = Juz::get();
 
-    public function ayat($id) {
-        $ayat = Ayat::with('surat')->first();
-
-        return $ayat;
-    }
-
-    public function juz($id) {
-        $juz = Juz::with('ayats')->first();
-
-        return $juz;
+        return view('home.list', compact(['surats', 'juzs']));
     }
 }

@@ -13,7 +13,27 @@
     <link rel="stylesheet" href="css/animated.css">    
   </head>
   <body>
-    <p>{{ $surat }}</p>
+      <p>{{ $surat->nomor_surat }}</p>
+      <p>{{ $surat->nama_surat }}</p>
+      <p>{{ $surat->nama_surat_arab }}</p>
+      <p>{{ $surat->arti_nama }}</p>
+      <p>{{ $surat->jumlah_ayat }}</p>
+      <p>{{ $surat->tempat_turun }}</p>
+      <p>{{ $surat->urutan_pewahyuan }}</p>
+
+      <ul>
+        @foreach ($surat->ayats as $ayat)
+          <li>
+            <div>
+            {{ $ayat->nomor_ayat }}
+            {{ $ayat->teks_arab }}
+            {{ $ayat->teks_latin }}
+            {{ $ayat->terjemahan_idn }}
+            {{ $ayat->terjemahan_eng }}
+           </div>
+          </li>
+        @endforeach
+      </ul>
 
   </body>
 </html>

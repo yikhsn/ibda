@@ -18,6 +18,8 @@ Route::get('/', 'MainController@index');
 
 Route::get('/read', 'MainController@read');
 
+Route::post('/read/search', 'MainController@search');
+
 
 /**
  * Controller for Surat like single surat page and etc

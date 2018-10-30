@@ -18,17 +18,17 @@
   <p>{{ $juz->nomor_juz }}</p>
 
   <ul>
-      @foreach ($juz->ayats as $ayat)
-        <li>
-          <div>
-          {{ $ayat->nomor_ayat }}
-          {{ $ayat->teks_arab }}
-          {{ $ayat->teks_latin }}
-          {{ $ayat->terjemahan_idn }}
-          {{ $ayat->terjemahan_eng }}
-         </div>
-        </li>
-      @endforeach
-    </ul>
+    @foreach ($juz->ayats as $ayat)
+      <li>
+        <div>
+        {{ $ayat->nomor_ayat }}
+        {{ $ayat->teks_arab }}
+        {{ $ayat->teks_latin }}
+        {{ $ayat->terjemahan_idn }}
+        {{ $ayat->terjemahan_eng }}
+        </div>
+      </li>
+    @endforeach
+  </ul>
 
 </html>

@@ -45,15 +45,21 @@
   </ul>
 
   <ul>
-      @foreach ($juzs as $juz)
-      <li>
-        <div>
-          {{ $juz->nomor_juz }}
-          {{ $juz->nama_juz }}
-        </div>
-      </li>
+    @foreach ($ayats as $ayat)
+      <a href="/surat/{{ $ayat->nomor_surat }}/ayat/{{ $ayat->nomor_ayat }}">
+        <li>
+          {{ $ayat->id }}
+          {{ $ayat->nomor_surat }}
+          {{ $ayat->nomor_ayat }}
+          {{ $ayat->juz }}
+          {{ $ayat->text_arab }}
+          {{ $ayat->text_latin }}
+          {{ $ayat->terjemahan_idn }}
+          {{ $ayat->terjemahan_eng }}   
+        </li>
+      </a>
       @endforeach
-    </ul>
-  
+  </ul>
+
 </body>
 </html>

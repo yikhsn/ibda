@@ -14,7 +14,7 @@
 /**
  * Controller for main page like home etc
  */
-Route::get('/', 'MainController@index');
+Route::get('/', 'MainController@index')->name('home');
 
 Route::get('/read', 'MainController@read');
 
@@ -38,3 +38,23 @@ Route::get('/surat/{nomor_surat}/ayat/{nomor_ayat}', 'AyatController@show');
  * Controller for Surat like single surat page and etc
  */
 Route::get('/juz/{nomor_juz}', 'JuzController@show');
+
+
+/**
+ * Route for Register Controller
+ */
+
+Route::get('/register', 'RegisterController@create');
+
+Route::post('/register', 'RegisterController@store');
+
+
+/**
+ * Route for Session Controller
+ */
+
+Route::get('/login', 'SessionController@create');
+
+Route::post('/login', 'SessionController@store');
+
+Route::get('/logout', 'SessionController@destroy');

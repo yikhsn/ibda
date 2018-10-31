@@ -23,8 +23,15 @@
                 </div>
 
                 <div class="header-box__button">
-                    <a href="#" class="button button-animated button-animated-left header-button__read">Baca Qur'an</a>
-                    <a href="#" class="button button-animated button-animated-right header-button__read">Lainnya</a>
+                    <a href="#" class="button button-animated button-animated-left header-button__read">
+                        Baca Qur'an
+                    </a>
+                    
+                    @if ( ! Auth::check() )
+                        <a href="#" class="button button-animated button-animated-right header-button__read">
+                            Lainnya
+                        </a>
+                    @endif
                 </div>
             </div>
         </header>

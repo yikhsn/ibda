@@ -21,11 +21,11 @@
     @foreach ($juz->ayats as $ayat)
       <li>
         <div>
-        {{ $ayat->nomor_ayat }}
-        {{ $ayat->teks_arab }}
-        {{ $ayat->teks_latin }}
-        {{ $ayat->terjemahan_idn }}
-        {{ $ayat->terjemahan_eng }}
+          {{ $ayat->nomor_ayat }}
+          {{ $ayat->teks_arab }}
+          {{ $ayat->teks_latin }}
+          {{ $ayat->terjemahan_idn }}
+          {{ $ayat->terjemahan_eng }}
         </div>
       </li>
     @endforeach

@@ -2,6 +2,51 @@
   --primary-color: #73B8D3;
 }
 
+@font-face {
+  font-family: 'me_quran';
+  src: url('../font/me_quran-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../font/me_quran-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/me_quran-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../font/me_quran-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../font/me_quran-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'pdms_saleem';
+  src: url('../font/pdms_saleem-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../font/pdms_saleem-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/pdms_saleem-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../font/pdms_saleem-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../font/pdms_saleem-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'kfc_naskh';
+  src: url('../font/kfc_naskh-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../font/kfc_naskh-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/kfc_naskh-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../font/kfc_naskh-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../font/kfc_naskh-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+
+@font-face {
+  font-family: 'scheherazade';
+  src: url('../font/scheherazade-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../font/scheherazade-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/scheherazade-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../font/scheherazade-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../font/scheherazade-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'xb_zar';
+  src: url('../font/xb_zar-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../font/xb_zar-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/xb_zar-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../font/xb_zar-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../font/xb_zar-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
 
 *,
 *::after,
@@ -20,15 +65,17 @@ body {
   font-weight: 400;
   line-height: 1.8;
   box-sizing: border-box;
+  background-color: #222222;
+
 }
 
 header {
   background-image: linear-gradient(
     to right bottom,
-    rgba(115, 184, 211, 0.8),
-    rgba(115, 184, 211, 0.8)
+    #000000cc,
+    #000000cc
   ),
-  url('../img/background.jpg');
+  url('../img/background-gold.jpg');
   height: 100vh;
   background-size: cover;
   background-position: top;
@@ -44,7 +91,7 @@ header {
   transform: translate(-50%, -50%);
   height: auto;
   width: auto;
-  background: #ffffffb0;
+  background: #ffffffca;
   text-align: center;
 }
 
@@ -71,11 +118,11 @@ header {
   border-radius: 100px;
   font-size: 1.7rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #222222;
   background: linear-gradient(
     to right,
-    #73B8D3,
-    #59abcb
+    #FBD379,
+    #fac858
     );
 }
 
@@ -103,11 +150,132 @@ header {
   animation-fill-mode: backwards;
 }
 
-/**
-test style
-*/
 
-li {
+/*======================================================================*/
+/*============================STYLE FOR AYATS===========================*/
+/*======================================================================*/
+
+.body-ayats {
+  color: red;
+}
+
+/*======================================================================*/
+/*============================STYLE FOR SURATS===========================*/
+/*======================================================================*/
+
+.search-surat-container {
+  height: 80vh;
+  background-image: linear-gradient(
+    to right bottom,
+    #00000088,
+    #00000088
+  ),
+  url('../img/background-gold.jpg');
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  background-attachment: fixed;
+
+}
+
+.logo-quran-box {
+  margin-bottom: 40px;
+}
+
+.logo-quran-box img {
+  width: 450px;
+  height: auto;
+}
+
+.search-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 60%;
+  height: auto;
+  font-size: 1.5rem;
+}
+
+.search-input {
+  display: inline-block;
+  width: 85%;
+  height: 60px;
+  margin: 0;
+}
+
+.search-button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  background-color: #FBD379;
+  color: #000000;
+  width: 10%;
+  height: 60px;
+}
+
+.search-button:hover {
+  background-color: #fac858;
+  color: #ffffff;
+}
+
+.content-surat {
+  margin: 40px 120px;
+}
+
+.navbar-surat {
+  display: inline;
   font-size: 2rem;
-  margin-bottom: 20px;
+  color: #FBD379;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-surat a {
+  color: #FBD379;
+  margin-bottom: 40px;
+  text-decoration: none;
+}
+
+.navbar-surat a:first-child {
+  margin-right: 20px;
+}
+
+.surats {
+  box-sizing: border-box;
+}
+
+.surat-single-box {
+  font-size: 1.6rem;
+  color: #FBD379;
+  margin-bottom: 10px;
+  border-radius: 100px;
+  transition: .5s all ease-out;
+}
+
+.surat-single-box:hover{
+  text-decoration: none;
+  color: #FBD379;
+  background-color: #333333;
+}
+
+.surat-single {
+  padding: 10px 40px;
+}
+
+.nomor-surat {
+  display: flex;
+  align-items: center;
+}
+
+.nama-surat {
+  font-size: 2rem;
+}
+
+.nama-surat-arab {
+  font-family: 'scheherazade';
+  font-weight: 500;
+  font-size: 4rem;
+  float: right;
 }

@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="header-box__button">
-                    <a href="#" class="button button-animated button-animated-left header-button__read">
+                    <a href="/read" class="button button-animated button-animated-left header-button__read">
                         Baca Qur'an
                     </a>
                     

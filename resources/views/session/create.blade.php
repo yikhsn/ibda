@@ -1,3 +1,10 @@
+@extends('layouts.master')
+
+@section('title')
+    
+@endsection
+
+@section('content')
 <div class="row">
   <div class="col-md-2">
       <form method="POST" action="/login">
@@ -17,3 +24,4 @@
 
   </div>
 </div>
+@endsection

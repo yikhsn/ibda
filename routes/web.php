@@ -53,7 +53,7 @@ Route::post('/register', 'RegisterController@store');
  * Route for Session Controller
  */
 
-Route::get('/login', 'SessionController@create');
+Route::get('/login', 'SessionController@create')->name('login');
 
 Route::post('/login', 'SessionController@store');
 
@@ -64,4 +64,4 @@ Route::get('/logout', 'SessionController@destroy');
  * Route for hafalan controller
  */
 
- Route::get('/hafal', 'HafalanController@index');
+ Route::get('/hafalan', 'HafalanController@index');

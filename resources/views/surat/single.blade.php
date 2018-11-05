@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+@extends('layouts.master')
 
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+@section('title')
+	<title>Single Ayat</title>		
+@endsection
 
-  <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet" type="text/css">
-  <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet" type="text/css">
-  <link href="{{ URL::asset('css/.css') }}" rel="stylesheet" type="text/css">
-
-
-</head>
-<body>
-
-	<nav class="navbar navbar-expand-lg navbar-dark nav-line">
+@section('content')
+<nav class="navbar navbar-expand-lg navbar-dark nav-line">
 	<a class="navbar-brand" href="#"><i class="fa fa-home"></i></a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	<span class="navbar-toggler-icon"></span>
@@ -135,8 +124,5 @@
   <p>{{ $ayat->surat->tempat_turun }}</p>
   <p>{{ $ayat->surat->urutan_pewahyuan }}</p>
 
-    
   </div>  
-
-</body>
-</html>
+@endsection

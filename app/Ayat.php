@@ -8,11 +8,18 @@ class Ayat extends Model
 {
     protected $table = "ayat";
 
-    public function juz() {
+    public function juz()
+    {
         return $this->belongsTo('App\Juz', 'nomor_juz', 'nomor_juz');
     }
 
-    public function surat() {
+    public function surat()
+    {
         return $this->belongsTo('App\Surat', 'nomor_surat', 'nomor_surat');
+    }
+
+    public function users()
+    {
+        return $this->belongsToMany('App\User');
     }
 }

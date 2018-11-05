@@ -1,44 +1,3 @@
-
-  {{-- <form action="/read/search" method="POST" role="search">
-    {{ csrf_field() }}
-    <div class="input-group">
-      <input type="text" class="form-control" name="query" placeholder="Search users">
-      <span class="input-group-button">
-          <button type="submit" class="btn btn-default">
-            Cari
-          </button>
-      </span>
-    </div>
-  </form>
-
-  <ul>
-    @foreach ($surats as $surat)
-    <li>
-      <div>
-        {{ $surat->nomor_surat }}
-        {{ $surat->nama_surat }}
-        {{ $surat->nama_surat_arab }}
-        {{ $surat->arti_nama }}
-        {{ $surat->jumlah_ayat }}
-        {{ $surat->tempat_turun }}
-        {{ $surat->urutan_pewahyuan }}
-
-      </div>
-    </li>
-    @endforeach
-  </ul>
-
-  <ul>
-      @foreach ($juzs as $juz)
-      <li>
-        <div>
-          {{ $juz->nomor_juz }}
-          {{ $juz->nama_juz }}
-        </div>
-      </li>
-      @endforeach
-    </ul> --}}
-
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
   <head>
@@ -64,19 +23,22 @@
 
     <div class="search-surat-container">
       <div class="search-box">
-          <div class="logo-quran-box">
-            <img class="logo-quran" src="{{ asset('/img/logo-white.png') }}" alt="">
-          </div>
-          <form action="/read/search" method="POST">
-            <input class="search-input" type="search" placeholder="Cari berdasarkan nama surah atau arti ayat...">
-            <input class="search-button" type="button" value="Cari">
-          </form>
+        <div class="logo-quran-box">
+          <img class="logo-quran" src="{{ asset('/img/logo-white.png') }}" alt="">
         </div>
+        <form action="/read/search" method="POST">
+          {{ csrf_field() }}
+
+          <input class="search-input" name="query" type="text" placeholder="Cari berdasarkan nama surah atau arti ayat...">
+          <button type="submit" class="search-button">
+            Cari
+          </button>
+        </form>
       </div>
+    </div>
 
     <div class="content-surat">
       <div class="navbar-surat">
-          <a href="/">JUZ</a>
           <a href="/">SURAH</a>
       </div>
       

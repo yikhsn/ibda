@@ -58,3 +58,10 @@ Route::get('/login', 'SessionController@create');
 Route::post('/login', 'SessionController@store');
 
 Route::get('/logout', 'SessionController@destroy');
+
+
+/**
+ * Route for hafalan controller
+ */
+
+ Route::get('/hafal', 'HafalanController@index');

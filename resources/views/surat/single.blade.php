@@ -8,10 +8,13 @@
 
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
-  <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet" type="text/css" >
+  <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ URL::asset('css/.css') }}" rel="stylesheet" type="text/css">
+
 
 </head>
-<body class="bodybaru">
+<body>
 
 	<nav class="navbar navbar-expand-lg navbar-dark nav-line">
 	<a class="navbar-brand" href="#"><i class="fa fa-home"></i></a>
@@ -40,14 +43,6 @@
 					<a class="dropdown-item" href="#">DST......</a>
 				</div>
 			</li>
-
-			<!--<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bahasa</a>
-				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="#">Indonesia</a>
-					<a class="dropdown-item" href="#">Inggris</a>
-				</div>
-			</li>-->
 
 			<li>
 				<a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-book-open" ></i> Read Mode</a>

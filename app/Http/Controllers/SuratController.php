@@ -12,7 +12,9 @@ class SuratController extends Controller
                     ->where('nomor_surat', $id)
                     ->first();
 
-        return view('surat.index', compact('surat'));
+        $all_surats = Surat::get();
+
+        return view('surat.index', compact(['surat', 'all_surats']));
     }
 
     public function ayat($nomor_surat, $nomor_ayat) {

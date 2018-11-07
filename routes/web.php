@@ -18,7 +18,9 @@ Route::get('/', 'MainController@index')->name('home');
 
 Route::get('/read', 'MainController@read');
 
-Route::post('/read/search', 'MainController@search');
+Route::get('/read/search', 'MainController@search');
+
+Route::post('/read/search', 'MainController@show');
 
 
 /**
@@ -65,3 +67,7 @@ Route::get('/logout', 'SessionController@destroy');
  */
 
  Route::get('/hafalan', 'HafalanController@index');
+
+ Route::post('/hafalan/simpan', 'HafalanController@store');
+
+//  Route::get('/test', 'HafalanController@test');

@@ -15,15 +15,15 @@
                 <a href="/read" class="button button-animated button-animated-left header-button__read">
                     Baca Qur'an
                 </a>
-                <a href="/read/search" class="button button-animated button-animated-left header-button__read">
+                <a href="/read/search" class="button button-animated button-animated-right header-button__read">
                     Cari Surat
                 </a>
                 
-                @if ( ! Auth::check() )
-                    <a href="#" class="button button-animated button-animated-right header-button__read">
+                {{-- @if ( ! Auth::check() ) --}}
+                    <a href="/hafalan" class="button button-animated button-animated-left header-button__read">
                         Mode Hafalan
                     </a>
-                @endif
+                {{-- @endif --}}
             </div>
         </div>
     </header>

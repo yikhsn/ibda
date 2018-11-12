@@ -16,9 +16,8 @@ class MainController extends Controller
     public function read() {
         $surats = Surat::get();
 
-        $juzs = Juz::get();
 
-        return view('home.list', compact(['surats', 'juzs']));
+        return view('home.list', compact('surats'));
     }
 
     public function show(Request $request)

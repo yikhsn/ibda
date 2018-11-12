@@ -14,9 +14,9 @@
             <div class="ayat-nomor-surat">
                 {{ $ayat->nomor_ayat }}
             </div>
-            <div class="ayat-putar-suara">
+            {{-- <div class="ayat-putar-suara">
               <button class="ayat-suara-button"></button>
-            </div>
+            </div> --}}
           </div>
           <div class="single-ayat-kanan">
             <div class="ayat-teks-arab">

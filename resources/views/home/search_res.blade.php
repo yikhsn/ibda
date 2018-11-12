@@ -11,7 +11,7 @@
 
     <div class="search-surat-container-result">
       <div class="search-box">
-        <form action="/read/search" method="POST">
+        <form action="/surat/cari" method="POST">
           {{ csrf_field() }}
 
           <input class="search-input" name="query" type="text" placeholder="Cari berdasarkan nama surah atau arti ayat...">

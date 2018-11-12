@@ -16,11 +16,11 @@
  */
 Route::get('/', 'MainController@index')->name('home');
 
-Route::get('/read', 'MainController@read');
+Route::get('/surat', 'MainController@read');
 
-Route::get('/read/search', 'MainController@search');
+Route::get('/surat/cari', 'MainController@search');
 
-Route::post('/read/search', 'MainController@show');
+Route::post('/surat/cari', 'MainController@show');
 
 
 /**

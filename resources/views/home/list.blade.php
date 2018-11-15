@@ -1,7 +1,11 @@
 @extends('layouts.master')
 
+@section('description')
+  <meta name="description" content="Daftar Semua Surat Al-Qur'an Lengkap 30 Juz">    
+@endsection
+
 @section('title')
-    <title>List Surat - Qur'anKu</title>
+    <title>Daftar Semua Surat - Baca Qur'an Online Lengkap dan Artinya</title>
 @endsection
 
 @section('content')
@@ -12,7 +16,7 @@
     <div class="search-surat-container">
       <div class="search-box">
         <div class="logo-quran-box">
-          <img class="logo-quran" src="{{ asset('/img/logo-white.png') }}" alt="">
+            <h1><img class="logo-quran" src="{{ asset('/img/logo-white.png') }}" alt="Daftar Semua Surat Al-Qur'an Lengkap 30 Juz"></h1>
         </div>
         {{-- <form action="/read/search" method="POST">
           {{ csrf_field() }}
@@ -27,27 +31,27 @@
 
     <div class="content-surat">
       <div class="navbar-surat">
-          <a href="/">SURAH</a>
+          <h2>Daftar Surat Al-Qur'an</h2>
       </div>
       
-      <div class="row no-gutters surats">
+      <ul class="row no-gutters surats">
         @foreach ($surats as $surat)
         <a href="/surat/{{ $surat->nomor_surat }}" class="col-md-6 col-12 surat-single-box">
-          <div class="row surat-single">
+          <li class="row surat-single">
             <div class="col-1 nomor-surat">
               {{ $surat->nomor_surat }}
             </div>
             <div class="col-5">
-              <div class="nama-surat">{{ $surat->nama_surat }}</div>
-              <div class="arti-nama-surat">{{ $surat->arti_nama }}</div>
+              <h3 class="nama-surat">{{ $surat->nama_surat }}</h3>
+              <h4 class="arti-nama-surat">{{ $surat->arti_nama }}</h4>
             </div>
             <div class="col-5">
               <div class="nama-surat-arab">{{ $surat->nama_surat_arab }}</div>
             </div>
-          </div>
+          </li>
         </a>
         @endforeach
-      </div>
+      </ul>
 
     </div>
 @endsection

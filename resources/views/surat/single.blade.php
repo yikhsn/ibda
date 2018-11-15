@@ -1,7 +1,11 @@
 @extends('layouts.master')
 
+@section('description')
+	<meta name="description" content="Baca Qur'an {{ $ayat->surat->nama_surat }} Ayat {{ $ayat->nomor_ayat }} online lengkap dengan artinya">
+@endsection
+
 @section('title')
-	<title>Single Ayat</title>		
+	<title>{{ $ayat->surat->nama_surat }} Ayat {{ $ayat->nomor_ayat }} - Baca Qur'an Online Lengkap dan Artinya </title>		
 @endsection
 
 @section('content')

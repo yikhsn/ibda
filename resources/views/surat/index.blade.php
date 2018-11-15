@@ -1,7 +1,11 @@
 @extends('layouts.master')
 
+@section('description')
+  <meta name="description" content="Baca Qur'an {{ $surat->nama_surat }} online lengkap dengan artinya">
+@endsection
+
 @section('title')
-  <title></title>
+  <title>{{ $surat->nama_surat }} - Baca Qur'an Online Lengkap dan Artinya</title>
 @endsection
 
 @section('content')
@@ -49,16 +53,16 @@
       <div class="keterangan-surat">
           <div class="keterangan-surat-nama-arab"> {{ $surat->nama_surat_arab }} </div>
 
-          <div class="keterangan-surat-nama-indo">{{ $surat->nama_surat }}</div>
-          <div class="keterangan-surat-arti-nama">{{ $surat->arti_nama }}</div>        
+          <h1 class="keterangan-surat-nama-indo">{{ $surat->nama_surat }}</h1>
+          <h2 class="keterangan-surat-arti-nama">{{ $surat->arti_nama }}</h2>        
       </div>
     </div>
 
     <div class="row no-gutters body-ayats-container">
-      <div class="body-ayats">
+      <ul class="body-ayats">
         @foreach ($surat->ayats as $ayat)
             
-        <div id="{{ $ayat->nomor_ayat }}" class="single-ayat">
+        <li id="{{ $ayat->nomor_ayat }}" class="single-ayat">
           <div class="single-ayat-kiri">
             <div class="ayat-nomor-surat">
                 {{ $ayat->nomor_ayat }}
@@ -84,14 +88,14 @@
               {{ $ayat->terjemahan_idn }}
             </div>
           </div>
-        </div>
+        </li>
 
         @endforeach
 
         <!-- <button type="button" class="btn btn-outline-light" margin="20"><i class="fa fa-arrow-left"></i> Surah Sebelumnya</button>
         <button type="button" class="btn btn-outline-light">Surah Berikutnya <i class="fa fa-arrow-right"></i></button> -->
 
-      </div>
+        </ul>
     </div>
 
   <script>

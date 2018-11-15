@@ -1,14 +1,18 @@
 @extends('layouts.master')
 
+@section('description')
+    <meta name="description" content="Baca Qur'an Online Lengkap 30 Juz Beserta Artinya">
+@endsection
+
 @section('title')
-    <title>Qur'anKu - Aplikasi Alquran Digital</title>
+    <title>Baca Qur'an Online Lengkap 30 Juz Beserta Artinya</title>
 @endsection
 
 @section('content')
     <header>
         <div class="header-box">
             <div class="header-box__logo">
-                <img src="img/logo.png" alt="" srcset="" class="logo">
+                <h1><img src="img/logo.png" alt="Baca Qur'an Online Lengkap 30 Juz Beserta Artinya" class="logo"></h1>
             </div>
 
             <div class="header-box__button">
@@ -20,9 +24,9 @@
                 </a>
                 
                 {{-- @if ( ! Auth::check() ) --}}
-                    <a href="/hafalan" class="button button-animated button-animated-left header-button__read">
+                    {{-- <a href="/hafalan" class="button button-animated button-animated-left header-button__read">
                         Mode Hafalan
-                    </a>
+                    </a> --}}
                 {{-- @endif --}}
             </div>
         </div>

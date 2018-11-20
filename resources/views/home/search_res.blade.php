@@ -9,9 +9,6 @@
 @endsection
 
 @section('content')
-    {{-- <div>
-        <img src="img/thumbnail.png" class="bg2"/>
-    </div> --}}
 
     <div class="search-surat-container-result">
       <div class="search-box">

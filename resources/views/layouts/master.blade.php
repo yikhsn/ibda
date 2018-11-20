@@ -15,14 +15,12 @@
 
     <!-- Styles -->
     <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ URL::asset('css/animated.css') }}" rel="stylesheet" type="text/css">      
+    
   </head>
   <body>
     
     @yield('content')
 
     <script src="{{ URL::asset('js/app.js') }}"></script>
-    <script src="{{ URL::asset('js/jquery.js') }}"></script>
   </body>
 </html>

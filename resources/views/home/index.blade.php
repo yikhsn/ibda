@@ -12,7 +12,7 @@
     <header>
         <div class="header-box">
             <div class="header-box__logo">
-                <h1><img src="img/logo.png" alt="Baca Qur'an Online Lengkap 30 Juz Beserta Artinya" class="logo"></h1>
+                <h1><img src="assets/img/logo.png" alt="Baca Qur'an Online Lengkap 30 Juz Beserta Artinya" class="logo"></h1>
             </div>
 
             <div class="header-box__button">

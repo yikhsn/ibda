@@ -72,10 +72,10 @@
             </div> --}}
             <div class="ayat-share">
               <div class="ayat-share-twitter">
-                  <a target="_blank" href="https://twitter.com/share?ref_src=surat/{{ $surat->nomor_surat }}" data-show-count="false"><img src="{{  URL::asset('img/twitter.svg') }}" alt=""></a>
+                  <a target="_blank" href="https://twitter.com/share?ref_src=surat/{{ $surat->nomor_surat }}" data-show-count="false"><img src="{{  URL::asset('assets/img/twitter.svg') }}" alt=""></a>
               </div>
               <div class="ayat-share-facebook">
-                  <a target="_blank" href="http://www.facebook.com/sharer.php?u=surat/{{ $surat->nomor_surat }}"><img src="{{  URL::asset('img/facebook.svg') }}" alt=""></a>
+                  <a target="_blank" href="http://www.facebook.com/sharer.php?u=surat/{{ $surat->nomor_surat }}"><img src="{{  URL::asset('assets/img/facebook.svg') }}" alt=""></a>
 
               </div>
             </div>

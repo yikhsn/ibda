@@ -1,0 +1,733 @@
+:root {
+    --primary-color: #73B8D3;
+    --input-padding-x: 2rem;
+    --input-padding-y: 1.5rem;
+  }
+  
+  @font-face {
+    font-family: 'me_quran';
+    src: url('../../assets/font/me_quran-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../../assets/font/me_quran-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../../assets/font/me_quran-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../../assets/font/me_quran-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../../assets/font/me_quran-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }
+  
+  @font-face {
+    font-family: 'pdms_saleem';
+    src: url('../../assets/font/pdms_saleem-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../../assets/font/pdms_saleem-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../../assets/font/pdms_saleem-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../../assets/font/pdms_saleem-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../../assets/font/pdms_saleem-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }
+  
+  @font-face {
+    font-family: 'kfc_naskh';
+    src: url('../../assets/font/kfc_naskh-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../../assets/font/kfc_naskh-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../../assets/font/kfc_naskh-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../../assets/font/kfc_naskh-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../../assets/font/kfc_naskh-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }
+  
+  
+  @font-face {
+    font-family: 'scheherazade';
+    src: url('../../assets/font/scheherazade-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../../assets/font/scheherazade-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../../assets/font/scheherazade-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../../assets/font/scheherazade-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../../assets/font/scheherazade-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }
+  
+  @font-face {
+    font-family: 'xb_zar';
+    src: url('../../assets/font/xb_zar-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../../assets/font/xb_zar-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../../assets/font/xb_zar-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../../assets/font/xb_zar-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../../assets/font/xb_zar-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }
+  
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  a {
+    outline: 0;
+  }
+  
+  a:hover, a:focus, a:visited {
+    outline: 0;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-family: 'Nunito', sans-serif; 
+    font-weight: 400;
+    line-height: 1.8;
+    box-sizing: border-box;
+    background-color: #222222;
+    outline: none;
+  }
+  
+  header {
+    background-image: linear-gradient(
+      to right,
+      #000000cc,
+      #00000022
+    ),
+    url('../../assets/img/background-gold.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+  }
+  
+  .header-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 8rem 10rem;
+    border-radius: 2rem;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: auto;
+    background: #ffffffdd;
+    text-align: center;
+  }
+  
+  .header-box__logo {
+    margin-bottom: 50px;
+  }
+  
+  .logo {
+    width: 20rem;
+    height: auto;
+    text-align: center;
+  }
+  
+  .button:link,
+  .button:visited {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    margin-bottom: 10px;
+    border-radius: 100px;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #222222;
+    background: linear-gradient(
+      to right bottom,
+      #f9b827,
+      #fbd379
+    );
+  }
+  
+  .button:last-child {
+    margin-bottom: 0;
+  }
+  
+  .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+  }
+  
+  .button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  }
+  
+  .button-animated-left {
+    animation: moveInLeft 2s ease-out .75s;
+    animation-fill-mode: backwards;
+  }
+  
+  .button-animated-right {
+    animation: moveInRight 2s ease-out .75s;
+    animation-fill-mode: backwards;
+  }
+  
+  /*======================================================================*/
+  /*============================STYLE FOR AYATS===========================*/
+  /*======================================================================*/
+  
+  /*======================================================================*/
+  /*============================STYLE FOR SURATS===========================*/
+  /*======================================================================*/
+  
+  .search-surat-container {
+    height: 80vh;
+    background-image: linear-gradient(
+      to right bottom,
+      #00000088,
+      #00000088
+    ),
+    url('../../assets/img/background-gold.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    background-attachment: fixed;
+  }
+  
+  .search-surat-container-show {
+    height: 100vh;
+    background-image: linear-gradient(
+      to right bottom,
+      #00000088,
+      #00000088
+    ),
+    url('../../assets/img/background-gold.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    background-attachment: fixed;
+  }
+  
+  .search-surat-container-result {
+    height: 50vh;
+    background-image: linear-gradient(
+      to right bottom,
+      #00000088,
+      #00000088
+    ),
+    url('../../assets/img/background-gold.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    background-attachment: fixed;
+  }
+  
+  .logo-quran-box {
+    margin-bottom: 40px;
+  }
+  
+  .logo-quran-box img {
+    width: 450px;
+    height: auto;
+  }
+  
+  .search-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 60%;
+    height: auto;
+    font-size: 1.5rem;
+  }
+  
+  .search-input {
+    display: inline-block;
+    width: 85%;
+    height: 60px;
+    margin: 0;
+  }
+  
+  .search-button {
+    display: inline-block;
+    border: none;
+    margin: 0;
+    background-color: #FBD379;
+    color: #000000;
+    width: 10%;
+    height: 60px;
+  }
+  
+  .search-button:hover {
+    background-color: #fac858;
+    color: #ffffff;
+  }
+  
+  .content-surat {
+    margin: 40px 120px;
+  }
+  
+  .navbar-surat {
+    display: inline;
+    font-size: 2rem;
+    color: #FBD379;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar-surat a {
+    color: #FBD379;
+    margin-bottom: 40px;
+    text-decoration: none;
+  }
+  
+  .navbar-surat a:first-child {
+    margin-right: 20px;
+  }
+  
+  .surats {
+    box-sizing: border-box;
+  }
+  
+  .surat-single-box {
+    font-size: 1.6rem;
+    color: #FBD379;
+    margin-bottom: 10px;
+    border-radius: 100px;
+    transition: .5s all ease-out;
+  }
+  
+  .surat-single-box:hover{
+    text-decoration: none;
+    color: #FBD379;
+    background-color: #333333;
+  }
+  
+  .surat-single {
+    padding: 10px 40px;
+  }
+  
+  .nomor-surat {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nama-surat {
+    font-size: 2rem;
+  }
+  
+  .nama-surat-arab {
+    font-family: 'scheherazade';
+    font-weight: 500;
+    font-size: 4rem;
+    float: right;
+  }
+  
+  /* ============================================================== */
+  /* ======================= SINGLE SURATS ======================== */
+  /* ============================================================== */
+  
+  .keterangan-surat-container {
+    height: 60vh;
+    background-image: linear-gradient(
+    to right bottom,
+    #00000088,
+    #00000088
+    ),
+    url('../../assets/img/background-gold.jpg');
+    /* background-color: #333333; */
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    background-attachment: fixed; 
+    margin-bottom: 0;
+  }
+  
+  .keterangan-surat {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 60%;
+    height: 100%;
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+  
+  .keterangan-surat-nama-arab {
+    font-family: 'scheherazade';
+    font-size: 15rem;
+    margin: 0;
+  
+  }
+  
+  .keterangan-surat-nama-indo {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .keterangan-surat-arti-nama {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .body-ayats-container {
+    background-color: #333333;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .body-ayats {
+    margin: 40px 150px;
+  }
+  
+  .single-ayat {
+    display: flex;
+    font-size: 2rem;
+    color: white;
+    padding: 80px 0;
+    border-bottom: 1px solid #FBD379;
+  }
+  
+  .single-ayat:last-child {
+    margin-bottom: 0;
+  }
+  
+  .single-ayat-kiri {
+    width: 10%;
+    display: block;
+  }
+  
+  .ayat-nomor-surat {
+    color: #FBD379;
+    font-size: 1.5rem;
+    padding: 12px 0;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    width: 5rem;
+    border-radius: 45px;
+    border: 2px solid #FBD379;
+    margin-bottom: 20px;
+  }
+  
+  .ayat-putar-suara {
+    width: 5rem;
+    margin-bottom: 20px;
+  }
+  
+  .ayat-share {
+    width: 5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .ayat-share-twitter {
+    width: 2rem;
+  
+  }
+  
+  .ayat-share-facebook {
+    width: 2rem;
+  
+  }
+  
+  .single-ayat-kanan {
+    width: 90%;
+  }
+  
+  .ayat-teks-arab {
+    font-family: 'scheherazade';
+    font-size: 5rem;
+    color: #FBD379;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+    text-align: right;
+  }
+  
+  .ayat-terjemahan {
+    font-size: 2rem;
+    color: #ffffff;
+  }
+  
+  .ayat-putar-suara button {
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #333333;
+    outline: none;
+  }
+  
+  .ayat-putar-suara .ayat-suara-button {
+    background-image: url('../../assets/img/play.svg');
+  }
+  
+  /* ======================================================= */
+  /* ======================= NAVBAR ======================== */
+  /* ======================================================= */
+  
+  nav{
+    border-bottom: 1px solid white;
+    height: 60px;
+    font-size: 1.5rem;
+    background-color: #ffffff;
+  }
+  
+  .scrollable-menu {
+    height: auto;
+    max-height: 400px;
+    width: 200px;
+    overflow-x: hidden;
+  }
+  
+  .dropdown-item {
+    font-size: 1.4rem;
+  }
+  
+  /* ======================================================= */
+  /* ================Login dan Register===================== */
+  /* ======================================================= */
+  
+  .container-form {
+    margin-top: 20vh;
+  }
+  
+  .container-register {
+    margin-top: 15vh;
+  }
+  
+  .card-signin {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-signin .card-title {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 2rem;
+  }
+  
+  .card-signin .card-body {
+    padding: 2rem;
+  }
+  
+  .form-signin {
+    width: 100%;
+  }
+  
+  .form-signin .btn {
+    font-size: 1rem;
+    border-radius: 5rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+    transition: all 0.2s;
+  }
+  
+  .form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .form-label-group input {
+    border-radius: 2rem;
+    height: 4rem;
+  }
+  
+  .form-label-group>input,
+  .form-label-group>label {
+    padding: var(--input-padding-y) var(--input-padding-x);
+  }
+  
+  .form-label-group input:focus {
+    border: 1px solid #fbd379;
+    box-shadow: none;
+  }
+  
+  .form-label-group>label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    /* Override default `<label>` margin */
+    line-height: 1.5;
+    color: #495057;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: all .1s ease-in-out;
+  }
+  
+  .form-label-group input::-webkit-input-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input:-ms-input-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input::-ms-input-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input::-moz-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input::placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input:not(:placeholder-shown) {
+    padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+    padding-bottom: calc(var(--input-padding-y) / 3);
+  }
+  
+  .form-label-group input:not(:placeholder-shown)~label {
+    padding-top: calc(var(--input-padding-y) / 3);
+    padding-bottom: calc(var(--input-padding-y) / 3);
+    font-size: 12px;
+    color: #777;
+  }
+  
+  .btn-register {
+    color: #ffffff;
+    background-color: #FBD379;
+  }
+  
+  .btn-register:hover {
+    color: #222222;
+    background-color: #fbce69;
+  }
+  
+  .btn-login {
+    color: #ffffff;
+    background-color: #fac348;
+    border: none;
+  }
+  
+  .btn-login:hover {
+    color: #222222;
+    background-color: #f9bd37;
+  }
+  
+  /* ======================================================= */
+  /* ================= Halaman Profile ===================== */
+  /* ======================================================= */
+  
+  .emp-profile{
+    height: 100vh;
+    padding: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+  }
+  .profile-img{
+    text-align: center;
+  }
+  .profile-img img{
+    width: 70%;
+    height: 100%;
+  }
+  .profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+  }
+  .profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+  }
+  .profile-head h5{
+    color: #333;
+  }
+  .profile-head h6{
+    color: #0062cc;
+  }
+  .profile-edit-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+  }
+  .proile-rating{
+    font-size: 12px;
+    color: #818182;
+    margin-top: 5%;
+  }
+  .proile-rating span{
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .profile-head .nav-tabs{
+    margin-bottom:5%;
+  }
+  .profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+  }
+  .profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #0062cc;
+  }
+  .profile-work{
+    padding: 14%;
+    margin-top: -15%;
+  }
+  .profile-work p{
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+  }
+  .profile-work a{
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .profile-work ul{
+    list-style: none;
+  }
+  .profile-tab label{
+    font-weight: 600;
+  }
+  .profile-tab p{
+    font-weight: 600;
+    color: #0062cc;
+  }
+  
+  
+  /* ======================================================= */
+  /* =================Style for Hafalan===================== */
+  /* ======================================================= */
+  
+  .single-ayat-hafalan {
+    display: flex;
+    font-size: 2rem;
+    color: white;
+    padding: 20px 0;
+    border-bottom: 1px solid #FBD379;
+  }
+  
+  .save-hafalan {
+    margin-top: 20px;
+    display: flex;
+    justify-content: right;
+  }
+  
+  .btn-save-hafalan {
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 150px;
+    color: #222222;
+    background-color: #fbd379;
+    padding: 10px;
+  }
+  
+  .btn-save-hafalan:hover {
+    color: #ffffff;
+    background-color: #fac348;
+  }

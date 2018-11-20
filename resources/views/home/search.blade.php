@@ -13,7 +13,7 @@
     <div class="search-box">
       <div class="logo-quran-box">
         <h1>
-          <img class="logo-quran" src="{{ asset('/img/logo-white.png') }}" alt="Cari Semua Surat Al-Qur'an Lengkap 30 Juz">
+          <img class="logo-quran" src="{{ asset('assets/img/logo-white.png') }}" alt="Cari Semua Surat Al-Qur'an Lengkap 30 Juz">
         </h1>
       </div>
       <form action="/surat/cari" method="POST">

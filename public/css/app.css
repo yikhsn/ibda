@@ -10664,8 +10664,8 @@ body {
 }
 
 header {
-  background-image: -webkit-gradient(linear, left top, right top, from(#000000cc), to(#00000022)), url(/images/background-gold.jpg?d1902cd17f54ab7d72de8d08de99825b);
-  background-image: linear-gradient(to right, #000000cc, #00000022), url(/images/background-gold.jpg?d1902cd17f54ab7d72de8d08de99825b);
+  background-image: -webkit-gradient(linear, left top, right top, from(#000000cc), to(#00000022)), url(/images/background-gold.jpg?c78e2caade9c9354155f188a2ff45fd4);
+  background-image: linear-gradient(to right, #000000cc, #00000022), url(/images/background-gold.jpg?c78e2caade9c9354155f188a2ff45fd4);
   height: 100vh;
   background-size: cover;
   background-position: top;
@@ -10757,8 +10757,8 @@ header {
 
 .search-surat-container {
   height: 80vh;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#00000088), to(#00000088)), url(/images/background-gold.jpg?d1902cd17f54ab7d72de8d08de99825b);
-  background-image: linear-gradient(to right bottom, #00000088, #00000088), url(/images/background-gold.jpg?d1902cd17f54ab7d72de8d08de99825b);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#00000088), to(#00000088)), url(/images/background-gold.jpg?c78e2caade9c9354155f188a2ff45fd4);
+  background-image: linear-gradient(to right bottom, #00000088, #00000088), url(/images/background-gold.jpg?c78e2caade9c9354155f188a2ff45fd4);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -10767,8 +10767,8 @@ header {
 
 .search-surat-container-show {
   height: 100vh;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#00000088), to(#00000088)), url(/images/background-gold.jpg?d1902cd17f54ab7d72de8d08de99825b);
-  background-image: linear-gradient(to right bottom, #00000088, #00000088), url(/images/background-gold.jpg?d1902cd17f54ab7d72de8d08de99825b);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#00000088), to(#00000088)), url(/images/background-gold.jpg?c78e2caade9c9354155f188a2ff45fd4);
+  background-image: linear-gradient(to right bottom, #00000088, #00000088), url(/images/background-gold.jpg?c78e2caade9c9354155f188a2ff45fd4);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -10777,8 +10777,8 @@ header {
 
 .search-surat-container-result {
   height: 50vh;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#00000088), to(#00000088)), url(/images/background-gold.jpg?d1902cd17f54ab7d72de8d08de99825b);
-  background-image: linear-gradient(to right bottom, #00000088, #00000088), url(/images/background-gold.jpg?d1902cd17f54ab7d72de8d08de99825b);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#00000088), to(#00000088)), url(/images/background-gold.jpg?c78e2caade9c9354155f188a2ff45fd4);
+  background-image: linear-gradient(to right bottom, #00000088, #00000088), url(/images/background-gold.jpg?c78e2caade9c9354155f188a2ff45fd4);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -10906,8 +10906,8 @@ header {
 
 .keterangan-surat-container {
   height: 60vh;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#00000088), to(#00000088)), url(/images/background-gold.jpg?d1902cd17f54ab7d72de8d08de99825b);
-  background-image: linear-gradient(to right bottom, #00000088, #00000088), url(/images/background-gold.jpg?d1902cd17f54ab7d72de8d08de99825b);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#00000088), to(#00000088)), url(/images/background-gold.jpg?c78e2caade9c9354155f188a2ff45fd4);
+  background-image: linear-gradient(to right bottom, #00000088, #00000088), url(/images/background-gold.jpg?c78e2caade9c9354155f188a2ff45fd4);
   /* background-color: #333333; */
   background-size: cover;
   background-position: top;

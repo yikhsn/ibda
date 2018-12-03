@@ -28,7 +28,7 @@ class MainController extends Controller
 
         $ayats = Ayat::where('terjemahan_idn', 'LIKE','%'. $query . '%')->get();
         
-        return view('home.search_res', compact(['surats', 'ayats']));
+        return view('home.search', compact(['surats', 'ayats']));
     }
 
     public function search()

@@ -14,16 +14,6 @@ class SuratController extends Controller
 
         $all_surats = Surat::get();
 
-        return view('surat.index', compact(['surat', 'all_surats']));
-    }
-
-    public function ayat($nomor_surat, $nomor_ayat) {
-        $surat = Surat::with('ayats')
-                    ->where('nomor_surat', $nomor_surat)
-                    ->first();
-
-        $ayat = $surat->ayats->where('nomor_ayat', $nomor_ayat);
-
-        // return view('surat.single', compact('ayat'));
+        return view('surat.single', compact(['surat', 'all_surats']));
     }
 }

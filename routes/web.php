@@ -18,9 +18,7 @@ Route::get('/', 'MainController@index')->name('home');
 
 Route::get('/surat', 'MainController@read');
 
-Route::get('/surat/cari', 'MainController@search');
-
-Route::post('/surat/cari', 'MainController@show');
+Route::post('/surat', 'MainController@show');
 
 
 /**

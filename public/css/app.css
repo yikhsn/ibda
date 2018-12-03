@@ -10584,11 +10584,56 @@ a.text-dark:hover {
   }
 }
 
-:root {
-  --primary-color: #73B8D3;
-  --input-padding-x: 2rem;
-  --input-padding-y: 1.5rem;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
+
+a {
+  outline: 0;
+}
+
+a:hover,
+a:focus,
+a:visited {
+  outline: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #222222;
+  outline: none;
+}
+
+/*======================================================================*/
+
+/*============================STYLE FOR SURATS===========================*/
+
+/*======================================================================*/
+
+/* ============================================================== */
+
+/* ======================= SINGLE SURATS ======================== */
+
+/* ============================================================== */
+
+/* ======================================================= */
+
+/* ======================= NAVBAR ======================== */
+
+/* ======================================================= */
 
 @font-face {
   font-family: 'me_quran';
@@ -10628,72 +10673,6 @@ a.text-dark:hover {
   /* IE9 Compat Modes */
   src: url(/fonts/xb_zar-webfont.eot?e4f414b6978f867689380ed33c76831a) format("embedded-opentype"), url(/fonts/xb_zar-webfont.woff?a25a6f285adba3934bcf2a2246e1ce67) format("woff"), url(/fonts/xb_zar-webfont.ttf?c7c1273313331458b90d327e6d3e53e4) format("truetype"), url(/fonts/xb_zar-webfont.svg?dd0982266885f37edf17c1f2c462f8cb) format("svg");
   /* Legacy iOS */
-}
-
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
-a {
-  outline: 0;
-}
-
-a:hover,
-a:focus,
-a:visited {
-  outline: 0;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 400;
-  line-height: 1.8;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: #222222;
-  outline: none;
-}
-
-header {
-  background-image: -webkit-gradient(linear, left top, right top, from(#000000cc), to(#00000022)), url(/images/background-gold.jpg?c78e2caade9c9354155f188a2ff45fd4);
-  background-image: linear-gradient(to right, #000000cc, #00000022), url(/images/background-gold.jpg?c78e2caade9c9354155f188a2ff45fd4);
-  height: 100vh;
-  background-size: cover;
-  background-position: top;
-  position: relative;
-}
-
-.header-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 8rem 10rem;
-  border-radius: 2rem;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  height: auto;
-  width: auto;
-  background: #ffffffdd;
-  text-align: center;
-}
-
-.header-box__logo {
-  margin-bottom: 50px;
-}
-
-.logo {
-  width: 20rem;
-  height: auto;
-  text-align: center;
 }
 
 .button:link,
@@ -10743,17 +10722,325 @@ header {
           animation-fill-mode: backwards;
 }
 
-/*======================================================================*/
+nav {
+  border-bottom: 1px solid white;
+  height: 60px;
+  font-size: 1.5rem;
+  background-color: #ffffff;
+}
 
-/*============================STYLE FOR AYATS===========================*/
+.scrollable-menu {
+  height: auto;
+  max-height: 400px;
+  width: 200px;
+  overflow-x: hidden;
+}
 
-/*======================================================================*/
+.dropdown-item {
+  font-size: 1.4rem;
+}
 
-/*======================================================================*/
+header {
+  background-image: -webkit-gradient(linear, left top, right top, from(#000000cc), to(#00000022)), url(/images/background-gold.jpg?c78e2caade9c9354155f188a2ff45fd4);
+  background-image: linear-gradient(to right, #000000cc, #00000022), url(/images/background-gold.jpg?c78e2caade9c9354155f188a2ff45fd4);
+  height: 100vh;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
 
-/*============================STYLE FOR SURATS===========================*/
+.header-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 8rem 10rem;
+  border-radius: 2rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: auto;
+  width: auto;
+  background: #ffffffdd;
+  text-align: center;
+}
 
-/*======================================================================*/
+.header-box__logo {
+  margin-bottom: 50px;
+}
+
+.logo {
+  width: 20rem;
+  height: auto;
+  text-align: center;
+}
+
+.single-ayat-hafalan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  color: white;
+  padding: 20px 0;
+  border-bottom: 1px solid #FBD379;
+}
+
+.save-hafalan {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.btn-save-hafalan {
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 150px;
+  color: #222222;
+  background-color: #fbd379;
+  padding: 10px;
+}
+
+.btn-save-hafalan:hover {
+  color: #ffffff;
+  background-color: #fac348;
+}
+
+.emp-profile {
+  height: 100vh;
+  padding: 3%;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+.profile-img {
+  text-align: center;
+}
+
+.profile-img img {
+  width: 70%;
+  height: 100%;
+}
+
+.profile-img .file {
+  position: relative;
+  overflow: hidden;
+  margin-top: -20%;
+  width: 70%;
+  border: none;
+  border-radius: 0;
+  font-size: 15px;
+  background: #212529b8;
+}
+
+.profile-img .file input {
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0;
+}
+
+.profile-head h5 {
+  color: #333;
+}
+
+.profile-head h6 {
+  color: #0062cc;
+}
+
+.profile-edit-btn {
+  border: none;
+  border-radius: 1.5rem;
+  width: 70%;
+  padding: 2%;
+  font-weight: 600;
+  color: #6c757d;
+  cursor: pointer;
+}
+
+.proile-rating {
+  font-size: 12px;
+  color: #818182;
+  margin-top: 5%;
+}
+
+.proile-rating span {
+  color: #495057;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.profile-head .nav-tabs {
+  margin-bottom: 5%;
+}
+
+.profile-head .nav-tabs .nav-link {
+  font-weight: 600;
+  border: none;
+}
+
+.profile-head .nav-tabs .nav-link.active {
+  border: none;
+  border-bottom: 2px solid #0062cc;
+}
+
+.profile-work {
+  padding: 14%;
+  margin-top: -15%;
+}
+
+.profile-work p {
+  font-size: 12px;
+  color: #818182;
+  font-weight: 600;
+  margin-top: 10%;
+}
+
+.profile-work a {
+  text-decoration: none;
+  color: #495057;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.profile-work ul {
+  list-style: none;
+}
+
+.profile-tab label {
+  font-weight: 600;
+}
+
+.profile-tab p {
+  font-weight: 600;
+  color: #0062cc;
+}
+
+.container-form {
+  margin-top: 20vh;
+}
+
+.container-register {
+  margin-top: 15vh;
+}
+
+.card-signin {
+  border: 0;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-signin .card-title {
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.card-signin .card-body {
+  padding: 2rem;
+}
+
+.form-signin {
+  width: 100%;
+}
+
+.form-signin .btn {
+  font-size: 1rem;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group input {
+  border-radius: 2rem;
+  height: 4rem;
+}
+
+.form-label-group > input,
+.form-label-group > label {
+  padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+.form-label-group input:focus {
+  border: 1px solid #fbd379;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.form-label-group > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+  padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown) ~ label {
+  padding-top: calc(var(--input-padding-y) / 3);
+  padding-bottom: calc(var(--input-padding-y) / 3);
+  font-size: 12px;
+  color: #777;
+}
+
+.btn-register {
+  color: #ffffff;
+  background-color: #FBD379;
+}
+
+.btn-register:hover {
+  color: #222222;
+  background-color: #fbce69;
+}
+
+.btn-login {
+  color: #ffffff;
+  background-color: #fac348;
+  border: none;
+}
+
+.btn-login:hover {
+  color: #222222;
+  background-color: #f9bd37;
+}
 
 .search-surat-container {
   height: 80vh;
@@ -10897,12 +11184,6 @@ header {
   font-size: 4rem;
   float: right;
 }
-
-/* ============================================================== */
-
-/* ======================= SINGLE SURATS ======================== */
-
-/* ============================================================== */
 
 .keterangan-surat-container {
   height: 60vh;
@@ -11053,316 +11334,5 @@ header {
 
 .ayat-putar-suara .ayat-suara-button {
   background-image: url(/images/play.svg?286ab3ff958c2f4a474974d50c71cf9d);
-}
-
-/* ======================================================= */
-
-/* ======================= NAVBAR ======================== */
-
-/* ======================================================= */
-
-nav {
-  border-bottom: 1px solid white;
-  height: 60px;
-  font-size: 1.5rem;
-  background-color: #ffffff;
-}
-
-.scrollable-menu {
-  height: auto;
-  max-height: 400px;
-  width: 200px;
-  overflow-x: hidden;
-}
-
-.dropdown-item {
-  font-size: 1.4rem;
-}
-
-/* ======================================================= */
-
-/* ================Login dan Register===================== */
-
-/* ======================================================= */
-
-.container-form {
-  margin-top: 20vh;
-}
-
-.container-register {
-  margin-top: 15vh;
-}
-
-.card-signin {
-  border: 0;
-  border-radius: 1rem;
-  -webkit-box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
-}
-
-.card-signin .card-title {
-  margin-bottom: 2rem;
-  font-weight: 300;
-  font-size: 2rem;
-}
-
-.card-signin .card-body {
-  padding: 2rem;
-}
-
-.form-signin {
-  width: 100%;
-}
-
-.form-signin .btn {
-  font-size: 1rem;
-  border-radius: 5rem;
-  letter-spacing: .1rem;
-  font-weight: bold;
-  padding: 1rem;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.form-label-group {
-  position: relative;
-  margin-bottom: 1rem;
-}
-
-.form-label-group input {
-  border-radius: 2rem;
-  height: 4rem;
-}
-
-.form-label-group > input,
-.form-label-group > label {
-  padding: var(--input-padding-y) var(--input-padding-x);
-}
-
-.form-label-group input:focus {
-  border: 1px solid #fbd379;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.form-label-group > label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  margin-bottom: 0;
-  /* Override default `<label>` margin */
-  line-height: 1.5;
-  color: #495057;
-  border: 1px solid transparent;
-  border-radius: .25rem;
-  -webkit-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
-}
-
-.form-label-group input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.form-label-group input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.form-label-group input::-ms-input-placeholder {
-  color: transparent;
-}
-
-.form-label-group input::placeholder {
-  color: transparent;
-}
-
-.form-label-group input:not(:placeholder-shown) {
-  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
-  padding-bottom: calc(var(--input-padding-y) / 3);
-}
-
-.form-label-group input:not(:placeholder-shown) ~ label {
-  padding-top: calc(var(--input-padding-y) / 3);
-  padding-bottom: calc(var(--input-padding-y) / 3);
-  font-size: 12px;
-  color: #777;
-}
-
-.btn-register {
-  color: #ffffff;
-  background-color: #FBD379;
-}
-
-.btn-register:hover {
-  color: #222222;
-  background-color: #fbce69;
-}
-
-.btn-login {
-  color: #ffffff;
-  background-color: #fac348;
-  border: none;
-}
-
-.btn-login:hover {
-  color: #222222;
-  background-color: #f9bd37;
-}
-
-/* ======================================================= */
-
-/* ================= Halaman Profile ===================== */
-
-/* ======================================================= */
-
-.emp-profile {
-  height: 100vh;
-  padding: 3%;
-  border-radius: 0.5rem;
-  background: #fff;
-}
-
-.profile-img {
-  text-align: center;
-}
-
-.profile-img img {
-  width: 70%;
-  height: 100%;
-}
-
-.profile-img .file {
-  position: relative;
-  overflow: hidden;
-  margin-top: -20%;
-  width: 70%;
-  border: none;
-  border-radius: 0;
-  font-size: 15px;
-  background: #212529b8;
-}
-
-.profile-img .file input {
-  position: absolute;
-  opacity: 0;
-  right: 0;
-  top: 0;
-}
-
-.profile-head h5 {
-  color: #333;
-}
-
-.profile-head h6 {
-  color: #0062cc;
-}
-
-.profile-edit-btn {
-  border: none;
-  border-radius: 1.5rem;
-  width: 70%;
-  padding: 2%;
-  font-weight: 600;
-  color: #6c757d;
-  cursor: pointer;
-}
-
-.proile-rating {
-  font-size: 12px;
-  color: #818182;
-  margin-top: 5%;
-}
-
-.proile-rating span {
-  color: #495057;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.profile-head .nav-tabs {
-  margin-bottom: 5%;
-}
-
-.profile-head .nav-tabs .nav-link {
-  font-weight: 600;
-  border: none;
-}
-
-.profile-head .nav-tabs .nav-link.active {
-  border: none;
-  border-bottom: 2px solid #0062cc;
-}
-
-.profile-work {
-  padding: 14%;
-  margin-top: -15%;
-}
-
-.profile-work p {
-  font-size: 12px;
-  color: #818182;
-  font-weight: 600;
-  margin-top: 10%;
-}
-
-.profile-work a {
-  text-decoration: none;
-  color: #495057;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.profile-work ul {
-  list-style: none;
-}
-
-.profile-tab label {
-  font-weight: 600;
-}
-
-.profile-tab p {
-  font-weight: 600;
-  color: #0062cc;
-}
-
-/* ======================================================= */
-
-/* =================Style for Hafalan===================== */
-
-/* ======================================================= */
-
-.single-ayat-hafalan {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 2rem;
-  color: white;
-  padding: 20px 0;
-  border-bottom: 1px solid #FBD379;
-}
-
-.save-hafalan {
-  margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-}
-
-.btn-save-hafalan {
-  font-size: 1.5rem;
-  font-weight: 700;
-  width: 150px;
-  color: #222222;
-  background-color: #fbd379;
-  padding: 10px;
-}
-
-.btn-save-hafalan:hover {
-  color: #ffffff;
-  background-color: #fac348;
 }
 

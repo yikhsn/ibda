@@ -1,0 +1,143 @@
+.search-surat-container {
+    height: 80vh;
+    background-image: linear-gradient(
+      to right bottom,
+      #00000088,
+      #00000088
+    ),
+    url('../../assets/img/background-gold.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    background-attachment: fixed;
+  }
+  
+  .search-surat-container-show {
+    height: 100vh;
+    background-image: linear-gradient(
+      to right bottom,
+      #00000088,
+      #00000088
+    ),
+    url('../../assets/img/background-gold.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    background-attachment: fixed;
+  }
+  
+  .search-surat-container-result {
+    height: 50vh;
+    background-image: linear-gradient(
+      to right bottom,
+      #00000088,
+      #00000088
+    ),
+    url('../../assets/img/background-gold.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    background-attachment: fixed;
+  }
+  
+  .logo-quran-box {
+    margin-bottom: 40px;
+  }
+  
+  .logo-quran-box img {
+    width: 450px;
+    height: auto;
+  }
+  
+  .search-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 60%;
+    height: auto;
+    font-size: 1.5rem;
+  }
+  
+  .search-input {
+    display: inline-block;
+    width: 85%;
+    height: 60px;
+    margin: 0;
+  }
+  
+  .search-button {
+    display: inline-block;
+    border: none;
+    margin: 0;
+    background-color: #FBD379;
+    color: #000000;
+    width: 10%;
+    height: 60px;
+  }
+  
+  .search-button:hover {
+    background-color: #fac858;
+    color: #ffffff;
+  }
+  
+  .content-surat {
+    margin: 40px 120px;
+  }
+  
+  .navbar-surat {
+    display: inline;
+    font-size: 2rem;
+    color: #FBD379;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar-surat a {
+    color: #FBD379;
+    margin-bottom: 40px;
+    text-decoration: none;
+  }
+  
+  .navbar-surat a:first-child {
+    margin-right: 20px;
+  }
+  
+  .surats {
+    box-sizing: border-box;
+  }
+  
+  .surat-single-box {
+    font-size: 1.6rem;
+    color: #FBD379;
+    margin-bottom: 10px;
+    border-radius: 100px;
+    transition: .5s all ease-out;
+  }
+  
+  .surat-single-box:hover{
+    text-decoration: none;
+    color: #FBD379;
+    background-color: #333333;
+  }
+  
+  .surat-single {
+    padding: 10px 40px;
+  }
+  
+  .nomor-surat {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nama-surat {
+    font-size: 2rem;
+  }
+  
+  .nama-surat-arab {
+    font-family: 'scheherazade';
+    font-weight: 500;
+    font-size: 4rem;
+    float: right;
+  }

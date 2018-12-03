@@ -15,14 +15,14 @@
         <div class="logo-quran-box">
             <h1><img class="logo-quran" src="{{ asset('assets/img/logo-white.png') }}" alt="Daftar Semua Surat Al-Qur'an Lengkap 30 Juz"></h1>
         </div>
-        {{-- <form action="/read/search" method="POST">
+        <form action="/surat" method="POST">
           {{ csrf_field() }}
 
           <input class="search-input" name="query" type="text" placeholder="Cari berdasarkan nama surah atau arti ayat...">
           <button type="submit" class="search-button">
             Cari
           </button>
-        </form> --}}
+        </form>
       </div>
     </div>
 
